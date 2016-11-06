@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   def index
-    @votes = Vote.all
+    @votes = Vote.page(params[:page])
 
     render("votes/index.html.erb")
   end
